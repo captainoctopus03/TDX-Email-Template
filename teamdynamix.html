@@ -1,10 +1,179 @@
+<!-- HTML Document Starts -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <!-- Meta Information -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Conditional Styling for Outlook -->
+    <!--[if mso]>
+    <style type="text/css">
+        body, table, td {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+    </style>
+    <![endif]-->
+
+    <style type="text/css">
+        /* Reset styles */
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            background-color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Outlook specific fixes */
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+        }
+
+        /* Link styling */
+        .contact-link {
+            text-decoration: none;
+            color: #006248 !important;
+        }
+
+        /* Responsive Design for Mobile */
+        @media screen and (max-width: 600px) {
+            .responsive-table {
+                width: 100% !important;
+            }
+
+            .two-column {
+                width: 100% !important;
+            }
+
+            .two-column td {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                padding: 10px 5px !important;
+            }
+
+            .two-column td[style*="border-right"] {
+                border-right: none !important;
+            }
+        }
+    </style>
+
+    <title>TeamDynamix Ticket</title>
 </head>
 <body>
-$END$
+
+<!-- Notification Banner -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="responsive-table k-table" style="margin: 20px 0;">
+    <tbody>
+    <tr>
+        <td style="padding: 0 20px;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #F6AA1B; border: 1px solid #58AF58; border-radius: 4px;">
+                <tbody>
+                <tr>
+                    <td style="padding: 10px 20px; font-family: 'Libre Baskerville', serif; font-size: 12px; color: #FFFFFF; text-align: center; font-style: italic;">
+                        Please note: To ensure your response is properly added to your ticket, any replies to this email should be sent above this line and include the original message below. Alternatively, you can message us directly through the ticket portal. Our team will respond as soon as possible to address your request.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Header Section -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="responsive-table k-table" style="min-width: 100%; margin-bottom: 10px; border: 2px solid #000000;">
+    <tbody>
+    <tr>
+        <!-- Logo -->
+        <td style="background-color: #FFFFFF; width: 65px; height: 65px;" align="center" valign="middle">
+            <img src="https://lds-business-college.brightspotcdn.com/dims4/default/1b47db2/2147483647/strip/true/crop/433x186+0+0/resize/866x372!/format/webp/quality/90/?url=http%3A%2F%2Fensign-brightspot.s3.us-east-2.amazonaws.com%2F72%2F02%2F8c43abd64244a8ce7b4ac9ec67a6%2Fensign-official-ces-logos-6inw-stacked-cmyk.png" width="65" height="28" alt="BYU-IDAHO Logo" style="display: block;" />
+        </td>
+        <!-- Header Text -->
+        <td style="background-color: #006248; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-size: 18px; padding: 10px 20px;">
+            IT Helpdesk Support Services
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Main Content Section -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="responsive-table k-table" style="margin: 20px auto;">
+    <tbody>
+    <tr>
+        <td style="padding: 20px; font-family: 'Montserrat', sans-serif; font-size: 20px; color: #006248; text-align: center; border-bottom: 2px solid #58AF58;">
+            <strong>Subject: Ticket Update</strong>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 0px; font-family: 'Libre Baskerville', serif; font-size: 16px; color: #000000; line-height: 1.8;">
+            <!-- Ticket Message -->
+            <p style="margin: 0;">Hello {{RequestorFirstName}},</p><br />
+            <p style="margin: 0;">We wanted to inform you that an update has been made to your support request. You can view the details by clicking the link here: <a href="{{NextTicketsUrl}}" style="color: #006248; text-decoration: none; font-weight: bold;">View Ticket #{{ID}}</a></p><br />
+            <p style="margin: 0;"><strong>Ticket Details:</strong></p>
+            <!-- Ticket Details Table -->
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0px auto; border-collapse: collapse;">
+                <!-- Title Row -->
+                <tr style="background-color: #F6AA1B; color: #FFFFFF;">
+                    <td style="padding: 10px; font-family: 'Montserrat', sans-serif; font-weight: bold;">Title</td>
+                    <td style="padding: 10px; font-family: 'Libre Baskerville', serif;">{{Title}}</td>
+                </tr>
+                <!-- Comment Row -->
+                <tr style="background-color: #FFFFFF; color: #000000;">
+                    <td style="padding: 10px; font-family: 'Montserrat', sans-serif; font-weight: bold;">Comment</td>
+                    <td style="padding: 10px; font-family: 'Libre Baskerville', serif;">
+                        <i>{{{UpdateText}}}</i><br />
+                        {{UpdateCreatedUserFullName}} commented on {{ModifiedDate}}
+                    </td>
+                </tr>
+                <!-- Related Article (Conditional) -->
+                {{#KnowledgeBaseArticleUrl}}
+                <tr style="background-color: #FFFFFF; color: #000000;">
+                    <td style="padding: 10px; font-family: 'Montserrat', sans-serif; font-weight: bold;">Related Article</td>
+                    <td style="padding: 10px; font-family: 'Libre Baskerville', serif;">
+                        <a href="{{KnowledgeBaseArticleUrl}}" style="color: #006248; text-decoration: none;">{{KnowledgeBaseArticleSubject}}</a>
+                    </td>
+                </tr>
+                {{/KnowledgeBaseArticleUrl}}
+                <!-- Requestor Row -->
+                <tr style="background-color: #FFFFFF; color: #000000;">
+                    <td style="padding: 10px; font-family: 'Montserrat', sans-serif; font-weight: bold;">Requestor</td>
+                    <td style="padding: 10px; font-family: 'Libre Baskerville', serif;">{{RequestorFullName}}</td>
+                </tr>
+                <!-- Responsible Row -->
+                <tr style="background-color: #FFFFFF; color: #000000;">
+                    <td style="padding: 10px; font-family: 'Montserrat', sans-serif; font-weight: bold;">Responsible</td>
+                    <td style="padding: 10px; font-family: 'Libre Baskerville', serif;">{{ResponsibleName}} / {{ResponsibleGroupName}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Footer Section -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #000000;">
+    <tbody>
+    <tr>
+        <td style="padding: 20px 40px; text-align: center; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-size: 10px;">
+            <p style="margin: 15px 0 0 0;">Copyright &copy; 2024 Ensign College Helpdesk, all rights reserved.</p>
+            <p style="margin: 10px 0;">This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete the original message from your system.</p>
+            <p style="margin: 10px 0;">Ensign IT Helpdesk<br />2nd Floor, 95 N 300 W, Salt Lake City, UT 84101</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
