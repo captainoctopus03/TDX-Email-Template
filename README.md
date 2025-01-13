@@ -65,13 +65,13 @@ This email template is designed for IT helpdesk support services to notify reque
 ## Example Data for Testing
 Replace placeholders with example data for local testing:
 - `{{RequestorFirstName}}`: "John"
-- `{{NextTicketsUrl}}`: "https://support.ensign.edu/ticket/12345"
+- `{{NextTicketsUrl}}`: "https://www.support.com"
 - `{{ID}}`: "12345"
 - `{{Title}}`: "System Login Issue"
 - `{{UpdateText}}`: "Your ticket has been updated with additional troubleshooting steps."
 - `{{UpdateCreatedUserFullName}}`: "Jane Doe"
 - `{{ModifiedDate}}`: "January 12, 2025"
-- `{{KnowledgeBaseArticleUrl}}`: "https://support.ensign.edu/article/56789"
+- `{{KnowledgeBaseArticleUrl}}`: "https://www.support.com/article/56789"
 - `{{KnowledgeBaseArticleSubject}}`: "How to Resolve Login Issues"
 - `{{RequestorFullName}}`: "John Smith"
 - `{{ResponsibleName}}`: "Jane Doe"
