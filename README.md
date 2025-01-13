@@ -1,4 +1,4 @@
-# TDX-Email-Template
+# Team Dynamix Ensign College Email Template
 
 ## Overview
 This email template is designed for IT helpdesk support services to notify requestors about updates to their support tickets. It uses a responsive design to ensure compatibility across various devices and email clients. The template incorporates best practices for accessibility, readability, and branding consistency.
