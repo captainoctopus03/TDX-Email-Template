@@ -1,4 +1,3 @@
-<!-- HTML Document Starts -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,9 +118,12 @@
         <td style="padding: 20px; color: #000000; line-height: 1.8;">
             <p style="margin: 0;">Hello {{RequestorFirstName}},</p><br />
             <p style="margin: 0;">
-                Thank you for your recent comment on Ticket #{{ID}}. We’ve received your update and are reviewing it. If you have additional details or questions, please don’t hesitate to share them.
+                We’ve created a ticket on your behalf to address your concern: Ticket <a href="{{NextTicketsUrl}}">#{{ID}}</a>. Our team will begin reviewing it shortly, and we’ll keep you updated on the progress.
             </p><br />
-            <p style="margin: 0;">Regards,</p></br>
+            <p style="margin: 0;">
+                If you have any urgent updates or additional details, feel free to reply to this email or add a comment to the ticket.
+            </p><br />
+            <p style="margin: 0;">Best regards,</p><br />
 
             <p style="margin: 0;">{{UpdateCreatedUserFullName}}</p>
             <p style="margin: 0;">{{ResponsibleGroupName}}</p><br />
@@ -129,6 +131,7 @@
     </tr>
     </tbody>
 </table>
+
 <!-- Footer Section -->
 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #000000; min-width:100%;">
     <tbody>
